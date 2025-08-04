@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Snake Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>🐍 Professional Snake Game</h1>
+            <div class="game-info">
+                <div class="score-board">
+                    <span class="label">Score:</span>
+                    <span id="current-score">0</span>
+                </div>
+                <div class="high-score-board">
+                    <span class="label">High Score:</span>
+                    <span id="high-score">0</span>
+                </div>
+                <div class="level-board">
+                    <span class="label">Level:</span>
+                    <span id="current-level">1</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-area">
+            <canvas id="gameCanvas" width="600" height="600"></canvas>
+            
+            <div class="game-overlay" id="gameOverlay">
+                <div class="overlay-content">
+                    <h2 id="overlayTitle">Welcome to Snake!</h2>
+                    <p id="overlayMessage">Use arrow keys or WASD to control the snake</p>
+                    <button id="startButton" class="game-button">Start Game</button>
+                    <button id="pauseButton" class="game-button" style="display: none;">Pause</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls-info">
+            <h3>Controls</h3>
+            <div class="control-grid">
+                <div class="control-item">
+                    <span class="key">↑ W</span>
+                    <span class="action">Move Up</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">↓ S</span>
+                    <span class="action">Move Down</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">← A</span>
+                    <span class="action">Move Left</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">→ D</span>
+                    <span class="action">Move Right</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">SPACE</span>
+                    <span class="action">Pause/Resume</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">R</span>
+                    <span class="action">Restart</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-settings">
+            <h3>Settings</h3>
+            <div class="setting-item">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="extreme">Extreme</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label for="soundToggle">Sound:</label>
+                <input type="checkbox" id="soundToggle" checked>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
